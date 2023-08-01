@@ -1,0 +1,340 @@
+{% extends "Portfolio/layout.html" %}
+{% block title %}
+    Home
+{% endblock %}
+
+{% block head %}
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script>
+        document.addEventListener("DOMContentLoaded",function() {
+            const element = document.getElementById('cont');
+            const element1 = document.getElementById('skillcont');
+            const element2 = document.getElementById('projectcont');
+            const element3 = document.getElementById('servicecont');
+            const element4 = document.getElementById('aboutecont');
+
+            document.querySelector('#home').onclick = function() {
+                element.scrollIntoView();
+            };   
+            document.querySelector('#skill').onclick = function(){
+                element1.scrollIntoView();
+            };
+            document.querySelector('#project').onclick = function(){
+                element2.scrollIntoView();
+            };
+            document.querySelector('#service').onclick = function(){
+                element3.scrollIntoView();
+            };
+            document.querySelector('#about').onclick = function(){
+                element4.scrollIntoView();
+            };
+            });
+        
+    </script>
+
+
+    <style>
+        .Nav-bar{
+            display:grid;
+            font-family: sans-serif;
+            margin-left: auto;
+            line-height: 50px;
+        }
+        .app{
+            margin:auto;
+            margin-left:auto;
+            font-family: sans-serif;
+            font-size: 200%;
+            color: yellow;
+        }
+        .Nav-items{
+            display: flex;
+        }
+        .Nav-items li{
+            list-style: none;
+            margin:0 15px;
+        }
+        .Nav-items li a{
+            color:#3d535f;
+            text-decoration: none;
+            border-radius: 40%;
+        }
+        .Nav-items li:hover a{
+            color: yellow;
+            text-shadow: #3d535f;
+        }
+        .main{
+            margin-top: 15%;
+            margin-bottom: none;
+            padding: 5%;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        .main:hover{
+            border-style: groove;
+            border-width: 0 20px;
+            border-color: olivedrab;
+            
+        }
+        .download{
+            margin-top: 10%;
+            text-decoration: none;
+            font-size: large;
+            border-radius: 5%;
+            padding-left: 2%;
+            padding-right: 2%;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            color:black;
+            
+        }
+        .download:hover{
+            background-color: rgb(252, 255, 59);
+        }
+        .links{
+            padding-top: 3%;
+            padding-bottom: 3%;
+            margin-top: auto;
+            margin-bottom: auto;
+            text-align: center;
+        }
+        .links a{
+            text-align: center;
+            font-size: 140%;
+            color: black;
+            margin: 25px 10px;
+            border-style:none;
+            border-radius: 40%;
+        }
+        .links a:hover {
+            color: yellow;
+            background-color: #3d535f;
+        }
+        p{
+            font-family: sans-serif;
+        }
+        .solo{
+            font-size: 150%;
+            font-family: sans-serif;
+            font-style:normal;
+            color: yellow;
+        }        
+        .content{
+            text-align: center;
+            font-family: sans-serif;
+            font-size: larger;
+            color: #3d535f;
+
+        }
+        .deva{
+            width: 20%;
+            height: 20%;
+            border-radius: 50%;
+        }
+        .skills-block{
+            padding-top: 10%;
+            padding-bottom: 10%;
+            margin-top: 15%;
+            margin-bottom: 15%;
+        }
+        .skills-block:hover{
+            border-style: groove;
+            border-width: 0 20px;
+            border-color: olivedrab;
+            
+        }
+        .ol-skill {
+            margin-left: 41%;
+            text-align: left;
+            font-family: sans-serif;
+            color: #3d535f;
+            font-size: medium;
+        }
+        li{
+            list-style: none;
+        }
+        li:hover{
+            list-style: none;
+            font-size: large;
+        }
+        .project-block{
+            padding-top: 10%;
+            padding-bottom: 10%;
+            margin-top: 15%;
+            margin-bottom: 15%;
+        }
+        .project-link{
+            display: flex;
+            text-align: center;
+        }
+        .c2c, .ims, .naa{
+            margin: 0 30px;
+            border-style:groove;
+            border-width: 20px;
+        }
+        .c2c{
+            margin-left: 2%;
+            width:50%;            
+        }
+        .ims{
+            width: 50%;
+        }
+        .naa{
+            width: 50%;
+        }
+        .c2ci, .imsi, .naai{
+            width:50%;
+            height: 50%;
+        }
+        .service-block{
+            padding-top: 10%;
+            padding-bottom: 10%;
+            margin-top: 15%;
+            margin-bottom: 20%;
+        }
+        .service-block:hover{
+            border-style: groove;
+            border-width: 0 20px;
+            border-color: olivedrab;
+            
+        }
+        .about-service{
+            text-align: center;
+            color: #3d535f;
+            font-family: sans-serif;
+            font-style: italic;
+            font-size: large;
+        }
+        .about-block{
+            margin-top: 15%;
+            padding-top: 5%;
+            background-color: #3d535f;
+            border-top-left-radius: 5%;
+            border-top-right-radius: 5%;
+            border-bottom-left-radius: 5%;
+            border-bottom-right-radius: 5%;
+
+        }
+        .aboutdev{
+            margin-left: 25%;
+            padding-left: 5%;
+            border-style: solid;
+            border-top: none;
+            border-right: none;
+            border-bottom: none;
+            font-family: sans-serif;
+            font-style: none;
+        }
+    </style>
+
+{% endblock %}
+{% load static %}
+{% block body %}
+    <div>
+        <div class="menu">
+             <nav class="Nav-bar">
+                <ul class="Nav-items">
+                    <div class="app"><b>Portfolio.</b></div>
+                    <li><a id="home" href="#cont">Home</a></li>
+                    <li><a id="skill" href="#skillcont">Skills</a></li>
+                    <li><a id="project" href="#projectcont">Projects</a></li>
+                    <li><a id="service" href="#servicecont">Services</a></li>
+                    <li><a id="about" href="#aboutcont">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="cont" class="main">
+            <p><b style="font-size: 250%; margin-left: auto;color: olivedrab;">Profile</b></p>
+            <img class="deva" src="{% static 'image/Devaraj.jpg' %}">
+            <p class="content">
+                Hello, Everyone! I'm <b class="solo">Devaraj</b>.<br>
+                <i>Here is my Briefcase.<br>
+                I'm a Web Developer.<br>
+                This site helps you to known about My Work, Documentry, Project, Skills and Services.<br>
+                </i>
+            </p>
+            <a href="{% static 'Files\DevarajM-Resume.pdf' %}" download class="download" >Download CV
+                <i class="fa-solid fa-download"></i>
+            </a>
+        </div>
+        <div id="skillcont" class="skills-block">
+            <div class="skill-in">
+                <p>
+                    <b style="font-size: 250%; margin-left: 45%;color: olivedrab;">Skills</b>
+                </p>
+                <ol class="ol-skill">
+                    <li>1.Python Proficent</li><br>
+                    <li>2.Django</li><br>
+                    <li>3.HTML, CSS</li><br>
+                    <li>4.JavaScript</li><br>
+                    <li>5.Tkinter</li><br>
+                    <li>6.Git and github</li><br>
+                </ol>
+            </div>    
+        </div>
+        <div id="projectcont" class="project-block">
+            <p>
+                <b style="font-size: 250%; margin-left: 45%;color: olivedrab;">Projects</b>
+            </p>
+            <div class="project-link">
+                <p class="c2c">
+                    <img class="c2ci" src="{% static 'image/c2c-ecommerce.jpg' %}"><br>
+                    <a href="https://github.com/Devaraj142/Devaraj142">C2C AutoMechtronic Services</a>
+                </p>
+
+                <p class="ims">
+                    <img class="imsi" src="{% static '\image/inventory-management-system.png' %}"><br>
+                    <a href="https://github.com/Devaraj142/Inventory-Management-System">Inventory Managment System</a>
+                </p>
+
+                <p class="naa">
+                    <img class="naai" src="{% static 'image/naa-logo.jpg' %}"><br>
+                    <a href="https://github.com/IBM-EPBL/IBM-Project-31453-1660200526">Nutrition Assistant Application</a>
+                </p>
+            </div>    
+        </div>
+        <div id="servicecont" class="service-block">
+            <p>
+                <b style="font-size: 250%; margin-left: 45%;color: olivedrab;">Services</b>
+            </p>
+            <div class="about-service">
+                <p>
+                    I Provide a Web Developing services and we make Programming for web Developing and any other System Application.<br>
+                    I'll be a Web Developer guide, that shows you to how to build a W-page or plan web application in internet using Programming.<br>
+                    I will helps to create basic web pages, Responsive web pages (or) Interative web pages and FullStack web Development.<br>  
+                    I make good looking GUI and system applications using Tkinter like Managment systems for organiztion like school, shops, etc.,<br>
+                </p>
+
+
+            </div>
+        </div>
+        <div id="aboutcont" class="about-block">
+            <p>
+                <b style="font-size: 200%; margin-left: 15%;color: white;">About</b>
+            </p>
+            <p class="aboutdev">
+                I'm a Professional Back-end Web Developer.<br>
+                I helps to Develop webpages and websites.<br> 
+                                                   <br>
+                    <b><span style="font-size: xx-large;">Contant</span></b><br>
+                <br>
+                    <i class="fa-solid fa-user"></i> Devaraj M<br>
+                    <i class="fa-brands fa-font-awesome"></i> Web Developer<br>
+                    <i class="fa-solid fa-envelope-open"></i> devmonty2002@gmail.com<br>
+                    <i class="fa-solid fa-mobile"></i> +91 99947 54112<br>
+                    <i class="fa-solid fa-location-dot"></i> Chennai<br>
+            </p>
+            <div class="links">
+                <p style="font-family: sans-serif; font-style:oblique;">Pick me on:</p>
+                <a href="https://www.linkedin.com/in/devaraj-murugan-451096235/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Devaraj142"><i class="fa-brands fa-github"></i></a>
+                <a href="https://twitter.com/Devaraj22813232?t=Duel6HqmjxXKG6555TIuKA&s=08"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://discord.com/channels/@me"><i class="fa-brands fa-discord"></i></a>        
+            </div>
+        </div>
+    </div>
+{% endblock %}
